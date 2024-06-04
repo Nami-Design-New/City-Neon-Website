@@ -324,7 +324,7 @@ header {
         max-width: 250px;
         width: 100%;
         object-fit: contain;
-        object-position: right;
+        object-position: left;
         padding-bottom: 8px;
       }
     }
@@ -351,12 +351,12 @@ header {
         padding: 5px;
         margin-bottom: 20px;
         img {
-          height: 50px;
+          height: 30px;
           min-width: 120px;
           max-width: 250px;
           width: 100%;
           object-fit: contain;
-          object-position: right;
+          object-position: left;
         }
       }
       @media screen and (max-width: 992px) {
@@ -391,9 +391,7 @@ header {
             flex: unset;
             // color: var(--mainColor);
           }
-          .navLink.active {
-            border-radius: 8px;
-          }
+          
         }
       }
     }

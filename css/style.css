@@ -351,8 +351,8 @@ header .inner .navbar-brand img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: right;
-     object-position: right;
+  -o-object-position: left;
+     object-position: left;
   padding-bottom: 8px;
 }
 header .inner .navbar {
@@ -379,14 +379,14 @@ header .inner .navbar .logo {
   margin-bottom: 20px;
 }
 header .inner .navbar .logo img {
-  height: 50px;
+  height: 30px;
   min-width: 120px;
   max-width: 250px;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: right;
-     object-position: right;
+  -o-object-position: left;
+     object-position: left;
 }
 @media screen and (max-width: 992px) {
   header .inner .navbar {
@@ -421,9 +421,6 @@ header .inner .navbar .logo img {
   }
   header .inner .navbar .navbar-nav .navLink {
     flex: unset;
-  }
-  header .inner .navbar .navbar-nav .navLink.active {
-    border-radius: 8px;
   }
 }
 header.headerAnimate .inner {
