@@ -1585,18 +1585,18 @@ footer {
         overflow: hidden;
       }
       .outlineGradient {
-       width: fit-content;
-       margin-left: auto;
-       border-radius: 100px;
-       &::after{
+        width: fit-content;
+        margin-left: auto;
         border-radius: 100px;
-       }
-       img{
-        height: 16px;
-        margin-left: 4px;
-        object-fit: contain;
-        aspect-ratio: 1;
-       }
+        &::after {
+          border-radius: 100px;
+        }
+        img {
+          height: 16px;
+          margin-left: 4px;
+          object-fit: contain;
+          aspect-ratio: 1;
+        }
       }
     }
     &.tech {
@@ -1629,6 +1629,7 @@ footer {
 }
 .ourWork {
   padding: 60px 12px;
+  padding-bottom: 150px;
   background-color: var(--mainColor05);
   z-index: 1;
   .swiperControl {
@@ -1673,6 +1674,76 @@ footer {
       }
       .hint {
         color: var(--lightGrayColor);
+      }
+    }
+  }
+}
+
+.stats {
+  .container {
+    position: relative;
+    z-index: 4;
+    margin-top: -60px;
+    background: var(--linearGradient);
+    padding: 40px;
+    border-radius: 20px;
+    animation: animateBg 5s linear infinite;
+    background-size: 400%;
+    .top {
+      text-align: center;
+      padding-bottom: 55px;
+      width: min(100% - 40px, 800px);
+      text-wrap: balance;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      gap: 8px;
+      @media (max-width: 767px) {
+        padding-bottom: 40px;
+      }
+      .secTitle {
+        font-weight: bold;
+        color: var(--whiteColor);
+        text-transform: uppercase;
+        font-family: fontBold;
+        font-size: 40px;
+        line-height: 40px;
+      }
+      .secSubTitle {
+        font-style: italic;
+        font-weight: bold;
+        color: var(--lightGrayColor);
+        font-family: fontBold;
+      }
+      .hint {
+        color: var(--lightGrayColor);
+      }
+    }
+    .all {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      .statistic {
+        flex: 1;
+        min-width: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        background-color: #ffffff0e;
+        border-radius: 16px;
+        padding: 24px;
+        backdrop-filter: blur(10px);
+        border: 1px solid #ffffff0e;
+
+        .counterUp {
+          font-weight: bold;
+          font-family: "fontBold";
+        }
+        h6 {
+          font-family: "fontBold";
+          text-transform: capitalize;
+        }
       }
     }
   }
