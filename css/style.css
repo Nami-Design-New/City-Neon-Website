@@ -949,7 +949,7 @@ header.headerAnimate .inner {
 }
 
 footer {
-  background-color: var(--secondColor);
+  background: var(--mainColor);
   position: relative;
   z-index: 2;
   padding: 40px 0;
@@ -962,7 +962,8 @@ footer .logo img {
      object-fit: contain;
   -o-object-position: left;
      object-position: left;
-  max-height: 60px;
+  max-height: 40px;
+  filter: brightness(0) invert(1);
 }
 footer .title {
   font-weight: bold;
@@ -987,7 +988,7 @@ footer .link {
 }
 footer .link path,
 footer .link svg {
-  fill: var(--mainColor);
+  fill: var(--whiteColor);
 }
 footer .link .icon {
   width: 32px;
@@ -996,7 +997,7 @@ footer .link .icon {
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  border: 1px solid var(--mainColor);
+  border: 1px solid var(--whiteColor);
 }
 footer .link .icon svg {
   width: 16px;
@@ -1007,14 +1008,14 @@ footer .link p {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  color: var(--mainColor);
+  color: var(--whiteColor);
   transition: var(--transition);
   direction: ltr;
   cursor: pointer;
 }
 footer .link a span,
 footer .link p span {
-  color: var(--mainColor);
+  color: var(--whiteColor);
 }
 footer .link:hover p {
   color: var(--goldColor);
@@ -1023,7 +1024,7 @@ footer .socialMedia a img {
   filter: brightness(0) invert(1) contrast(0.8);
 }
 footer .border-top {
-  --bs-border-color: #eee5cb;
+  --bs-border-color: var(--darkColor);
 }
 
 .clients {
