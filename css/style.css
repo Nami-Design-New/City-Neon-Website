@@ -1024,7 +1024,7 @@ footer .socialMedia a img {
   filter: brightness(0) invert(1) contrast(0.8);
 }
 footer .border-top {
-  --bs-border-color: var(--darkColor);
+  --bs-border-color: #ffffff30;
 }
 
 .clients {
@@ -2117,4 +2117,29 @@ footer .border-top {
 }
 .contact .contact_info .field:hover .icon::after {
   opacity: 1;
+}
+
+.copywriting {
+  display: flex;
+  padding: 24px;
+  margin-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1882352941);
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.copywriting a {
+  color: var(--whiteColor) !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.copywriting a span {
+  text-transform: uppercase;
+}
+.copywriting img {
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: brightness(0) invert(1);
 }/*# sourceMappingURL=style.css.map */
