@@ -376,7 +376,7 @@ $(document).ready(function () {
 // ////////////////////////////////////////
 $(document).ready(function () {
   //spinner
-  $(".preloader").delay(500).fadeOut(300);
+  $(".spinerLoader").delay(500).fadeOut(300);
   //aos Delay
   $("section").each(function () {
     const sectionDivs = $(this).find("[data-aos]");
@@ -435,7 +435,42 @@ $(document).ready(function () {
   elements.forEach((el) => IO.observe(el));
 });
 
-// filepond
-$(".filepond-multiple").filepond({
-  allowMultiple: true,
+// Fade Animation Bottom
+let fade_animation = gsap.utils.toArray(".cxu-fade");
+fade_animation.forEach((fade) => {
+  const ease_value = fade.getAttribute("data-ease");
+
+  gsap.from(fade, {
+    scrollTrigger: {
+      trigger: fade,
+      start: "top 90%",
+    },
+    delay: 0.5,
+    opacity: 0,
+    y: 50,
+    ease: ease_value,
+    duration: 1.5,
+  });
 });
+// Service move
+var service_item = gsap.utils.toArray(".cxuService .service-item");
+let service_img = gsap.utils.toArray(".cxuService .hover-img");
+
+function ServiceImageMove(event, item) {
+  const contentBox = item.getBoundingClientRect();
+  const dx = (event.clientX - contentBox.x) / 5;
+  const dy = (event.clientY - contentBox.y) / 8;
+  service_img.forEach((img) => {
+    gsap.to(img, {
+      x: dx,
+      y: dy,
+    });
+  });
+}
+
+service_item.forEach((item, i) => {
+  item.addEventListener("mousemove", (event) => {
+    setInterval(ServiceImageMove(event, item), 1000);
+  });
+});
+
