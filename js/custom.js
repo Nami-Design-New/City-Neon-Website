@@ -361,6 +361,55 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
+
+  // Courses
+  var Courses = new Swiper(".Courses", {
+    navigation: {
+      nextEl: ".CoursesNext",
+      prevEl: ".CoursesPrev",
+    },
+    pagination: {
+      el: ".CoursesPagination",
+      type: "fraction",
+    },
+    loop: true,
+    spaceBetween: 12,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+     
+      768: {
+        slidesPerView: 2,
+      },
+  
+      1200: {
+        slidesPerView: 3,
+      },
+    },
+  });
+  $(".Courses").hover(
+    function () {
+      this.swiper.autoplay.stop();
+    },
+    function () {
+      this.swiper.autoplay.start();
+    }
+  );
+  $(".cardBack .limet").each(function () {
+    var text = $(this).text();
+    if (text.length > 200) {
+      var truncatedText =
+        $.trim(text).substring(0, 200).split(" ").slice(0, -1).join(" ") +
+        "...";
+      $(this).text(truncatedText);
+    }
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -473,4 +522,3 @@ service_item.forEach((item, i) => {
     setInterval(ServiceImageMove(event, item), 1000);
   });
 });
-
