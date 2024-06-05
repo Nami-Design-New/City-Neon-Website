@@ -1026,173 +1026,84 @@ footer .border-top {
   --bs-border-color: #eee5cb;
 }
 
-.partners {
+.clients {
   background: var(--darkColor);
   position: relative;
   z-index: 2;
   padding: 100px 0 60px;
   overflow: hidden;
 }
-.partners .sectionTitle {
-  padding-bottom: 10px;
-  margin-bottom: 8px;
+.clients .sectionTitle {
   text-align: center;
-}
-.partners .sectionTitle .title {
-  color: var(--mainColor);
-  font-weight: bold;
-  font-family: "fontBold", sans-serif !important;
-}
-.partners .sectionTitle .sub {
-  color: var(--goldColor);
-  font-weight: bold;
-}
-.partners .sectionTitle .hint {
-  color: var(--grayColor);
+  padding-bottom: 55px;
   width: min(100% - 40px, 800px);
+  text-wrap: balance;
   margin: auto;
-  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.partners .logo {
+@media (max-width: 767px) {
+  .clients .sectionTitle {
+    padding-bottom: 40px;
+  }
+}
+.clients .sectionTitle .sub {
+  font-weight: bold;
+  color: var(--mainColor);
+  text-transform: uppercase;
+  font-family: fontBold;
+  font-size: 40px;
+  line-height: 40px;
+}
+.clients .sectionTitle .title {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--lightGrayColor);
+  font-family: fontBold;
+}
+.clients .sectionTitle .hint {
+  color: var(--lightGrayColor);
+}
+.clients .logo {
   padding: 10px;
   position: relative;
   width: 100%;
   height: 100%;
   aspect-ratio: 1/1;
 }
-.partners .logo img {
+.clients .logo img {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: var(--transition);
 }
-.partners .swiperControl {
+.clients .logo:hover img {
+  filter: none;
+}
+.clients .swiperControl {
   position: relative;
   padding-top: 60px;
 }
-.partners .swiperControl .swiper-pagination {
+.clients .swiperControl .swiper-pagination {
   justify-content: center;
 }
-.partners .swiperControl .swiper-pagination .swiper-pagination-bullet {
+.clients .swiperControl .swiper-pagination .swiper-pagination-bullet {
   background-color: var(--whiteColor);
 }
-.partners .inner {
+.clients .inner {
   background-color: var(--mainColor);
   text-align: center;
   padding: 24px;
   height: 100%;
 }
-.partners .inner .subTitle {
+.clients .inner .subTitle {
   color: var(--whiteColor);
   font-weight: bold;
   font-family: "fontBold", sans-serif !important;
   margin-bottom: 16px;
-}
-
-.contactUs {
-  padding: 80px 0 0;
-  position: relative;
-  background-color: var(--darkColor);
-}
-.contactUs .sectionTitle {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-.contactUs .sectionTitle .title {
-  font-weight: bold;
-  font-family: "fontBold", sans-serif !important;
-}
-.contactUs .sectionTitle .hint {
-  color: var(--grayColor);
-}
-.contactUs .info {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 24px;
-  padding-top: 30px;
-}
-.contactUs .info .link {
-  display: flex;
-  width: -moz-fit-content;
-  width: fit-content;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-.contactUs .info .link path,
-.contactUs .info .link svg {
-  fill: var(--darkColor);
-}
-.contactUs .info .link:last-child {
-  margin-bottom: 0;
-}
-.contactUs .info .link .icon {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  border: 1px solid var(--darkColor);
-}
-.contactUs .info .link .icon svg {
-  width: 20px;
-  height: 20px;
-}
-.contactUs .info .link p {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  transition: var(--transition);
-  color: var(--grayColor);
-}
-.contactUs .info .link p span {
-  color: var(--darkColor);
-  direction: ltr;
-}
-.contactUs .info .link:hover p {
-  color: var(--mainColor);
-}
-.contactUs form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: end;
-}
-.contactUs form .form-control {
-  border: none;
-  background: #fff;
-  border-radius: 0;
-  color: var(--darkColor);
-  min-height: 64px;
-  padding: 16px;
-}
-.contactUs form .btn {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  padding: 16px 32px;
-  background-color: var(--mainColor);
-  color: var(--whiteColor);
-  border-radius: 0;
-  transition: var(--transition);
-  font-size: 16px;
-  text-transform: capitalize;
-}
-.contactUs form .btn:hover {
-  background: var(--goldColor);
-  gap: 16px;
-}
-.contactUs .map {
-  width: 100%;
-  height: 400px;
-  padding-top: 40px;
-}
-.contactUs .map iframe {
-  width: 100%;
-  height: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -1469,7 +1380,7 @@ footer .border-top {
 .serviceArea .cxuService img {
   transition: var(--transition);
 }
-.serviceArea .cxuService .service-item {
+.serviceArea .cxuService .serviceItem {
   gap: 15px;
   display: grid;
   grid-template-columns: 0.2fr 1fr 1fr 0.3fr;
@@ -1480,17 +1391,17 @@ footer .border-top {
   transition: var(--transition);
 }
 @media (max-width: 991px) {
-  .serviceArea .cxuService .service-item {
+  .serviceArea .cxuService .serviceItem {
     padding: 30px 20px;
     grid-template-columns: 0.2fr 1fr 1.5fr 0.2fr;
   }
 }
 @media (max-width: 767px) {
-  .serviceArea .cxuService .service-item {
+  .serviceArea .cxuService .serviceItem {
     grid-template-columns: 1fr;
   }
 }
-.serviceArea .cxuService .service-item .title {
+.serviceArea .cxuService .serviceItem .title {
   transition: var(--transition);
   font-size: 35px;
   font-weight: 400;
@@ -1501,16 +1412,16 @@ footer .border-top {
   font-family: fontBold;
 }
 @media (max-width: 1199px) {
-  .serviceArea .cxuService .service-item .title {
+  .serviceArea .cxuService .serviceItem .title {
     font-size: 30px;
   }
 }
 @media (max-width: 991px) {
-  .serviceArea .cxuService .service-item .title {
+  .serviceArea .cxuService .serviceItem .title {
     font-size: 24px;
   }
 }
-.serviceArea .cxuService .service-item .number {
+.serviceArea .cxuService .serviceItem .number {
   transition: var(--transition);
   font-size: 16px;
   font-weight: 400;
@@ -1518,12 +1429,12 @@ footer .border-top {
   color: var(--whiteColor);
   text-transform: capitalize;
 }
-.serviceArea .cxuService .service-item .services {
+.serviceArea .cxuService .serviceItem .services {
   transition: var(--transition);
   -moz-columns: 2;
        columns: 2;
 }
-.serviceArea .cxuService .service-item .services li {
+.serviceArea .cxuService .serviceItem .services li {
   transition: var(--transition);
   font-size: 18px;
   font-weight: 400;
@@ -1534,16 +1445,16 @@ footer .border-top {
   align-items: baseline;
   gap: 8px;
 }
-.serviceArea .cxuService .service-item .link {
+.serviceArea .cxuService .serviceItem .link {
   text-align: end;
 }
 @media (max-width: 767px) {
-  .serviceArea .cxuService .service-item .link {
+  .serviceArea .cxuService .serviceItem .link {
     text-align: start;
     margin-top: 10px;
   }
 }
-.serviceArea .cxuService .service-item .link a {
+.serviceArea .cxuService .serviceItem .link a {
   transition: var(--transition);
   width: 90px;
   height: 90px;
@@ -1555,29 +1466,29 @@ footer .border-top {
   overflow: hidden;
 }
 @media (max-width: 991px) {
-  .serviceArea .cxuService .service-item .link a {
+  .serviceArea .cxuService .serviceItem .link a {
     width: 60px;
     height: 60px;
   }
 }
-.serviceArea .cxuService .service-item .link a:hover .icon-1 {
+.serviceArea .cxuService .serviceItem .link a:hover .icon-1 {
   opacity: 0;
   transform: translate(35px, -35px);
 }
-.serviceArea .cxuService .service-item .link a:hover .icon-2 {
+.serviceArea .cxuService .serviceItem .link a:hover .icon-2 {
   opacity: 1;
   transform: translate(0, 0);
 }
-.serviceArea .cxuService .service-item .link a .icon-1,
-.serviceArea .cxuService .service-item .link a .icon-2 {
+.serviceArea .cxuService .serviceItem .link a .icon-1,
+.serviceArea .cxuService .serviceItem .link a .icon-2 {
   transition: all 0.5s;
 }
-.serviceArea .cxuService .service-item .link a .icon-2 {
+.serviceArea .cxuService .serviceItem .link a .icon-2 {
   position: absolute;
   transform: translate(-35px, 35px);
   opacity: 0;
 }
-.serviceArea .cxuService .service-item .hover-img {
+.serviceArea .cxuService .serviceItem .hover-img {
   position: absolute;
   top: -120px;
   width: 300px;
@@ -1588,33 +1499,33 @@ footer .border-top {
   border-radius: 15px;
   overflow: hidden;
 }
-.serviceArea .cxuService .service-item .hover-img img {
+.serviceArea .cxuService .serviceItem .hover-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.serviceArea .cxuService .service-item:hover {
+.serviceArea .cxuService .serviceItem:hover {
   background: var(--whiteColor);
   margin-inline: -30px;
   padding-inline: 30px;
   border-radius: 20px;
 }
-.serviceArea .cxuService .service-item:hover .number,
-.serviceArea .cxuService .service-item:hover .title {
+.serviceArea .cxuService .serviceItem:hover .number,
+.serviceArea .cxuService .serviceItem:hover .title {
   color: var(--darkColor);
 }
-.serviceArea .cxuService .service-item:hover .services li {
+.serviceArea .cxuService .serviceItem:hover .services li {
   color: var(--darkColor);
 }
-.serviceArea .cxuService .service-item:hover .services li img {
+.serviceArea .cxuService .serviceItem:hover .services li img {
   filter: brightness(0);
 }
-.serviceArea .cxuService .service-item:hover .link a {
+.serviceArea .cxuService .serviceItem:hover .link a {
   border-color: var(--mainColor);
   background-color: var(--mainColor);
 }
-.serviceArea .cxuService .service-item:hover .hover-img {
+.serviceArea .cxuService .serviceItem:hover .hover-img {
   opacity: 1;
   visibility: visible;
 }/*# sourceMappingURL=style.css.map */

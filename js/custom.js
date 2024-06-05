@@ -453,7 +453,7 @@ fade_animation.forEach((fade) => {
   });
 });
 // Service move
-var service_item = gsap.utils.toArray(".cxuService .service-item");
+var service_item = gsap.utils.toArray(".cxuService .serviceItem");
 let service_img = gsap.utils.toArray(".cxuService .hover-img");
 
 function ServiceImageMove(event, item) {

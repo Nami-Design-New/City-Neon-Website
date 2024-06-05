@@ -975,32 +975,44 @@ footer {
     --bs-border-color: #eee5cb;
   }
 }
-.partners {
+.clients {
   background: var(--darkColor);
   position: relative;
   z-index: 2;
   padding: 100px 0 60px;
   overflow: hidden;
+
   .sectionTitle {
-    padding-bottom: 10px;
-    margin-bottom: 8px;
     text-align: center;
-    .title {
-      color: var(--mainColor);
-      font-weight: bold;
-      font-family: "fontBold", sans-serif !important;
+    padding-bottom: 55px;
+    width: min(100% - 40px, 800px);
+    text-wrap: balance;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @media (max-width: 767px) {
+      padding-bottom: 40px;
     }
     .sub {
-      color: var(--goldColor);
       font-weight: bold;
+      color: var(--mainColor);
+      text-transform: uppercase;
+      font-family: fontBold;
+      font-size: 40px;
+      line-height: 40px;
+    }
+    .title {
+      font-style: italic;
+      font-weight: bold;
+      color: var(--lightGrayColor);
+      font-family: fontBold;
     }
     .hint {
-      color: var(--grayColor);
-      width: min(100% - 40px, 800px);
-      margin: auto;
-      margin-top: 16px;
+      color: var(--lightGrayColor);
     }
   }
+
   .logo {
     padding: 10px;
     position: relative;
@@ -1011,6 +1023,13 @@ footer {
       height: 100%;
       width: 100%;
       object-fit: contain;
+      filter: brightness(0) invert(1);
+      transition: var(--transition);
+    }
+    &:hover {
+      img {
+        filter: none;
+      }
     }
   }
   .swiperControl {
@@ -1037,112 +1056,8 @@ footer {
     }
   }
 }
-.contactUs {
-  padding: 80px 0 0;
-  position: relative;
-  background-color: var(--darkColor);
-  .sectionTitle {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 24px;
-    .title {
-      font-weight: bold;
-      font-family: "fontBold", sans-serif !important;
-    }
-    .hint {
-      color: var(--grayColor);
-    }
-  }
-  .info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 24px;
-    padding-top: 30px;
-    .link {
-      display: flex;
-      width: fit-content;
-      gap: 12px;
-      path,
-      svg {
-        fill: var(--darkColor);
-      }
-      margin-bottom: 16px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      .icon {
-        width: 48px;
-        height: 48px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100px;
-        border: 1px solid var(--darkColor);
-        svg {
-          width: 20px;
-          height: 20px;
-        }
-      }
-      p {
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-        transition: var(--transition);
-        color: var(--grayColor);
-        span {
-          color: var(--darkColor);
-          direction: ltr;
-        }
-      }
-      &:hover {
-        p {
-          color: var(--mainColor);
-        }
-      }
-    }
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: end;
-    .form-control {
-      border: none;
-      background: #fff;
-      border-radius: 0;
-      color: var(--darkColor);
-      min-height: 64px;
-      padding: 16px;
-    }
-    .btn {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      padding: 16px 32px;
-      background-color: var(--mainColor);
-      color: var(--whiteColor);
-      border-radius: 0;
-      transition: var(--transition);
-      font-size: 16px;
-      text-transform: capitalize;
-      &:hover {
-        background: var(--goldColor);
-        gap: 16px;
-      }
-    }
-  }
-  .map {
-    width: 100%;
-    height: 400px;
-    padding-top: 40px;
-    iframe {
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
+
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 25px;
@@ -1406,7 +1321,7 @@ footer {
     img {
       transition: var(--transition);
     }
-    .service-item {
+    .serviceItem {
       gap: 15px;
       display: grid;
       grid-template-columns: 0.2fr 1fr 1fr 0.3fr;
