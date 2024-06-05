@@ -512,3 +512,11 @@ service_item.forEach((item, i) => {
     setInterval(ServiceImageMove(event, item), 1000);
   });
 });
+function highlight(el) {
+  el.previousElementSibling.classList.add("h");
+}
+function dehighlight(el) {
+  if (el.value === "") {
+    el.previousElementSibling.classList.remove("h");
+  }
+}

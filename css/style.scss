@@ -73,7 +73,7 @@ button:focus {
   margin: 0px;
 }
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background-color: var(--darkColor);
 }
 body,
@@ -166,7 +166,7 @@ button {
   background-color: transparent;
 }
 .form-control {
-  min-height: 54px;
+  min-height: 48px;
   &:focus {
     box-shadow: none;
   }
@@ -981,7 +981,6 @@ footer {
   z-index: 2;
   padding: 100px 0 60px;
   overflow: hidden;
-
   .sectionTitle {
     text-align: center;
     padding-bottom: 55px;
@@ -1012,7 +1011,6 @@ footer {
       color: var(--lightGrayColor);
     }
   }
-
   .logo {
     padding: 10px;
     position: relative;
@@ -1056,7 +1054,6 @@ footer {
     }
   }
 }
-
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 25px;
@@ -1281,6 +1278,7 @@ footer {
 .serviceArea {
   background-color: var(--mainColor);
   padding: 80px 0;
+
   .serviceTop {
     text-align: center;
     padding-bottom: 55px;
@@ -1453,7 +1451,6 @@ footer {
           opacity: 1;
           visibility: visible;
         }
-
         .number,
         .title {
           color: var(--darkColor);
@@ -1476,7 +1473,6 @@ footer {
     }
   }
 }
-
 .flipCard {
   height: 350px;
   width: 100%;
@@ -1527,7 +1523,6 @@ footer {
       gap: 8px;
       padding: 24px;
       justify-content: flex-end;
-
       .title {
         font-family: "fontBold";
         color: var(--whiteColor);
@@ -1663,8 +1658,12 @@ footer {
         color: var(--whiteColor);
         text-transform: uppercase;
         font-family: fontBold;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 30px;
+        line-height: 30px;
+        @media screen and (max-width: 768px) {
+          font-size: 24px;
+          line-height: 24px;
+        }
       }
       .secSubTitle {
         font-style: italic;
@@ -1678,7 +1677,6 @@ footer {
     }
   }
 }
-
 .stats {
   .container {
     position: relative;
@@ -1706,8 +1704,12 @@ footer {
         color: var(--whiteColor);
         text-transform: uppercase;
         font-family: fontBold;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 30px;
+        line-height: 30px;
+        @media screen and (max-width: 768px) {
+          font-size: 24px;
+          line-height: 24px;
+        }
       }
       .secSubTitle {
         font-style: italic;
@@ -1735,7 +1737,6 @@ footer {
         padding: 24px;
         backdrop-filter: blur(10px);
         border: 1px solid #ffffff0e;
-
         .counterUp {
           font-weight: bold;
           font-family: "fontBold";
@@ -1748,3 +1749,274 @@ footer {
     }
   }
 }
+
+.careers {
+  background: var(--mainColor);
+  padding: 60px 24px;
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .top {
+    text-align: start;
+    width: min(100% - 40px, 800px);
+    text-wrap: balance;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+
+    .secTitle {
+      font-weight: bold;
+      color: var(--whiteColor);
+      text-transform: uppercase;
+      font-family: fontBold;
+      font-size: 30px;
+      line-height: 30px;
+    }
+    .secSubTitle {
+      font-style: italic;
+      font-weight: bold;
+      color: var(--lightGrayColor);
+      font-family: fontBold;
+    }
+    .hint {
+      color: var(--lightGrayColor);
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--whiteColor);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: var(--BigShadow);
+    .hint {
+      color: var(--grayColor);
+      font-style: italic;
+    }
+    .form-select,
+    .form-control {
+      min-height: 48px;
+      border-radius: 8px;
+    }
+    .outlineGradient {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.contact {
+  padding: 80px 0;
+  form {
+    background: #000000;
+    box-shadow: 0px 4px 24px #0000001a;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    @media (max-width: 576px) {
+      padding: 32px 0;
+    }
+    .form-group {
+      display: flex;
+      width: 100%;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 48px;
+      }
+      .inputfield {
+        width: 100%;
+        padding: 0 16px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        label {
+          position: absolute;
+          font-size: 14px;
+          color: var(--grayColor);
+          left: 16px;
+          transform: translateY(-50%);
+          top: 50%;
+          font-weight: 500;
+          transition: var(--transition);
+          text-transform: capitalize;
+          i {
+            margin-right: 4px;
+          }
+          cursor: auto;
+          &.message-label {
+            top: 20%;
+          }
+          &.h {
+            top: -4px;
+            color: var(--mainColor);
+          }
+        }
+        input,
+        textarea {
+          width: 100%;
+          height: 45px;
+          border: none;
+          outline: none;
+          background: none;
+          &:focus + span::after {
+            width: calc(100% - 32px);
+          }
+        }
+        textarea {
+          padding: 16px 0;
+          height: 130px;
+        }
+        .highlight {
+          width: 100%;
+          height: 1px;
+          background: var(--grayColor);
+          &::after {
+            content: "";
+            width: 0;
+            transition: var(--transition);
+            left: 50%;
+            height: 1px;
+            background: var(--mainColor);
+            position: absolute;
+            transform: translate(-50%);
+          }
+        }
+      }
+    }
+
+    .outlineGradient {
+      justify-content: center;
+      width: fit-content;
+      align-self: flex-end;
+      &::after {
+        background: #000000;
+      }
+    }
+  }
+  .contact_info {
+    width: 100%;
+    height: 100%;
+    .top {
+      text-align: start;
+      padding-bottom: 55px;
+      width: min(100% - 40px, 800px);
+      text-wrap: balance;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      @media (max-width: 767px) {
+        padding-bottom: 40px;
+      }
+      @media (max-width: 992px) {
+        text-align: center;
+      }
+
+      .secTitle {
+        font-weight: bold;
+        color: var(--whiteColor);
+        text-transform: uppercase;
+        font-family: fontBold;
+        font-size: 30px;
+        line-height: 30px;
+        @media screen and (max-width: 768px) {
+          font-size: 24px;
+          line-height: 24px;
+        }
+      }
+      .secSubTitle {
+        font-style: italic;
+        font-weight: bold;
+        color: var(--lightGrayColor);
+        font-family: fontBold;
+      }
+      .hint {
+        color: var(--lightGrayColor);
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .field {
+      width: 100%;
+      display: flex;
+
+      gap: 16px;
+      align-items: center;
+      .icon {
+        min-width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1px solid var(--mainColor);
+        overflow: hidden;
+        isolation: isolate;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          z-index: 0;
+          transition: var(--transition);
+          background: var(--mainColor);
+        }
+        path,
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: var(--mainColor);
+        }
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        h4 {
+          margin-bottom: 4px;
+          color: var(--mainColor);
+          font-size: 13px;
+          font-weight: bold;
+        }
+        a {
+          color: var(--);
+        }
+      }
+      &:hover {
+        .icon {
+          border-color: transparent;
+          path,
+          svg {
+            fill: var(--whiteColor);
+            z-index: 2;
+          }
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
