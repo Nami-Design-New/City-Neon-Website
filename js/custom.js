@@ -26,7 +26,7 @@ $(document).ready(function () {
   // lines
   const animate_lines = document.querySelectorAll(".animate_lines");
   animate_lines.forEach((areveal) => {
-    var duration_value = 1;
+    var duration_value = .75;
     var onscroll_value = 1;
     var stagger_value = 0.08;
     var data_delay = 0.5;
@@ -74,7 +74,7 @@ $(document).ready(function () {
   // words
   const animate_words = document.querySelectorAll(".animate_words");
   animate_words.forEach((areveal) => {
-    var duration_value = 1;
+    var duration_value = .75;
     var onscroll_value = 1;
     var stagger_value = 0.02;
     var data_delay = 0.5;
@@ -124,7 +124,7 @@ $(document).ready(function () {
   // chars
   const animate_chars = document.querySelectorAll(".animate_chars");
   animate_chars.forEach((areveal) => {
-    var duration_value = 1;
+    var duration_value = .75;
     var onscroll_value = 1;
     var stagger_value = 0.003;
     var data_delay = 0.5;
