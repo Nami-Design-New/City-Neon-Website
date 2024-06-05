@@ -1703,29 +1703,29 @@ footer .border-top {
   transform: rotateY(0deg);
 }
 
-.confirmedCourses {
+.ourWork {
   padding: 60px 12px;
   background-color: var(--mainColor05);
   z-index: 1;
 }
-.confirmedCourses .swiperControl {
+.ourWork .swiperControl {
   padding: 0;
 }
-.confirmedCourses .swiper-wrapper {
+.ourWork .swiper-wrapper {
   padding: 24px 0;
 }
-.confirmedCourses .sectionTop {
+.ourWork .sectionTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center !important;
 }
 @media (max-width: 768px) {
-  .confirmedCourses .sectionTop {
+  .ourWork .sectionTop {
     flex-direction: column;
   }
 }
-.confirmedCourses .sectionTop .top {
+.ourWork .sectionTop .top {
   text-align: center;
   padding-bottom: 55px;
   width: min(100% - 40px, 800px);
@@ -1736,11 +1736,11 @@ footer .border-top {
   gap: 8px;
 }
 @media (max-width: 767px) {
-  .confirmedCourses .sectionTop .top {
+  .ourWork .sectionTop .top {
     padding-bottom: 40px;
   }
 }
-.confirmedCourses .sectionTop .top .secTitle {
+.ourWork .sectionTop .top .secTitle {
   font-weight: bold;
   color: var(--whiteColor);
   text-transform: uppercase;
@@ -1748,12 +1748,12 @@ footer .border-top {
   font-size: 40px;
   line-height: 40px;
 }
-.confirmedCourses .sectionTop .top .secSubTitle {
+.ourWork .sectionTop .top .secSubTitle {
   font-style: italic;
   font-weight: bold;
   color: var(--lightGrayColor);
   font-family: fontBold;
 }
-.confirmedCourses .sectionTop .top .hint {
+.ourWork .sectionTop .top .hint {
   color: var(--lightGrayColor);
 }/*# sourceMappingURL=style.css.map */

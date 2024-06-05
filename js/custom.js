@@ -95,7 +95,6 @@ $(document).ready(function () {
       type: "lines,words",
       linesClass: "anim-reveal-line",
     });
-
     if (onscroll_value == 1) {
       areveal.anim = gsap.from(areveal.split.words, {
         scrollTrigger: {
@@ -361,15 +360,14 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
-
-  // Courses
-  var Courses = new Swiper(".Courses", {
+  // ourWork
+  var ourWork = new Swiper(".ourWork .swiper", {
     navigation: {
-      nextEl: ".CoursesNext",
-      prevEl: ".CoursesPrev",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: ".CoursesPagination",
+      el: ".swiper-pagination",
       type: "fraction",
     },
     loop: true,
@@ -383,17 +381,15 @@ $(document).ready(function () {
       0: {
         slidesPerView: 1,
       },
-     
       768: {
         slidesPerView: 2,
       },
-  
       1200: {
         slidesPerView: 3,
       },
     },
   });
-  $(".Courses").hover(
+  $(".ourWork").hover(
     function () {
       this.swiper.autoplay.stop();
     },
@@ -436,7 +432,6 @@ $(document).ready(function () {
       }
     });
   });
-
   // aos
   AOS.init({
     offset: 20,
@@ -444,7 +439,6 @@ $(document).ready(function () {
     duration: 750,
     once: true,
   });
-
   // lozad
   const observer = lozad(".lazy", {
     loaded: function (el) {
@@ -483,12 +477,10 @@ $(document).ready(function () {
   const elements = document.querySelectorAll(".counterUp");
   elements.forEach((el) => IO.observe(el));
 });
-
 // Fade Animation Bottom
 let fade_animation = gsap.utils.toArray(".cxu-fade");
 fade_animation.forEach((fade) => {
   const ease_value = fade.getAttribute("data-ease");
-
   gsap.from(fade, {
     scrollTrigger: {
       trigger: fade,
@@ -504,7 +496,6 @@ fade_animation.forEach((fade) => {
 // Service move
 var service_item = gsap.utils.toArray(".cxuService .serviceItem");
 let service_img = gsap.utils.toArray(".cxuService .hover-img");
-
 function ServiceImageMove(event, item) {
   const contentBox = item.getBoundingClientRect();
   const dx = (event.clientX - contentBox.x) / 5;
@@ -516,7 +507,6 @@ function ServiceImageMove(event, item) {
     });
   });
 }
-
 service_item.forEach((item, i) => {
   item.addEventListener("mousemove", (event) => {
     setInterval(ServiceImageMove(event, item), 1000);
