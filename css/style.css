@@ -627,6 +627,8 @@ header.headerAnimate .inner {
 .aboutPage .lazyImg .lazyDiv {
   height: 100%;
   margin: auto;
+  filter: grayscale(1);
+  transition: var(--transition);
 }
 .aboutPage .lazyImg .lazyDiv .simpleParallax {
   height: 100%;
@@ -639,6 +641,9 @@ header.headerAnimate .inner {
   height: 85%;
   -o-object-position: top;
      object-position: top;
+}
+.aboutPage .lazyImg .lazyDiv:hover {
+  filter: grayscale(0);
 }
 .aboutPage .statistic {
   padding: 8px 0;
