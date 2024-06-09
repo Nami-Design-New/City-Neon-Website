@@ -85,6 +85,7 @@ button:focus {
 
 body {
   overflow-x: hidden !important;
+  width: 100dvw;
   background-color: var(--darkColor);
 }
 
@@ -217,8 +218,6 @@ content {
   min-height: calc(100dvh - 320px);
   display: flex;
   flex-direction: column;
-  width: 100dvw;
-  overflow-x: hidden;
 }
 
 .spinerLoader {
