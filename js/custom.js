@@ -104,7 +104,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        x: 80,
+        y: 80,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -113,7 +113,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        x: 80,
+        y: 80,
         stagger: stagger_value,
         opacity: 0,
       });
