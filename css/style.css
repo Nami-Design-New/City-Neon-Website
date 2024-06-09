@@ -1846,6 +1846,7 @@ footer .border-top {
   width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
+  margin-right: 16px;
 }
 .contact form .outlineGradient::after {
   background: #000000;

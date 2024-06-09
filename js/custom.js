@@ -56,7 +56,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        x: 80,
+        y: 40,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -65,7 +65,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        x: 80,
+        y: 40,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -104,7 +104,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        y: 80,
+        y: 40,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -113,7 +113,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        y: 80,
+        y: 40,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -151,7 +151,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        x: 40,
+        y: 40,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -160,7 +160,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        x: 40,
+        y: 40,
         stagger: stagger_value,
         opacity: 0,
       });
