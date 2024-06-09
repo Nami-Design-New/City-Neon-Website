@@ -782,6 +782,7 @@ header.headerAnimate .inner {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  overflow: hidden;
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
@@ -798,7 +799,22 @@ header.headerAnimate .inner {
   align-items: center;
   gap: 4px;
   border-radius: 12px;
+  position: relative;
+  isolation: isolate;
+}
+.vision .container .values .value::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--mainColor);
+  z-index: -1;
+  border-radius: 12px;
+  opacity: 0;
   transition: var(--transition);
+  visibility: hidden;
 }
 .vision .container .values .value img {
   min-width: 80px;
@@ -816,10 +832,6 @@ header.headerAnimate .inner {
   transition: var(--transition);
   white-space: nowrap;
 }
-.vision .container .values .value:hover {
-  background-color: var(--mainColor);
-  transform: translateY(-5px);
-}
 .vision .container .values .value:hover h6 {
   color: white;
 }
@@ -828,6 +840,10 @@ header.headerAnimate .inner {
 }
 .vision .container .values .value:hover img {
   filter: brightness(0) invert(1);
+}
+.vision .container .values .value:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .scrollDown {

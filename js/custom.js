@@ -26,7 +26,7 @@ $(document).ready(function () {
   // lines
   const animate_lines = document.querySelectorAll(".animate_lines");
   animate_lines.forEach((areveal) => {
-    var duration_value = .75;
+    var duration_value = 0.75;
     var onscroll_value = 1;
     var stagger_value = 0.08;
     var data_delay = 0.5;
@@ -56,7 +56,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        y: 80,
+        x: 80,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -65,7 +65,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        y: 80,
+        x: 80,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -74,7 +74,7 @@ $(document).ready(function () {
   // words
   const animate_words = document.querySelectorAll(".animate_words");
   animate_words.forEach((areveal) => {
-    var duration_value = .75;
+    var duration_value = 0.75;
     var onscroll_value = 1;
     var stagger_value = 0.02;
     var data_delay = 0.5;
@@ -104,8 +104,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        y: 20,
-        // x: 20,
+        x: 80,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -114,8 +113,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        y: 20,
-        // x: 20,
+        x: 80,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -124,7 +122,7 @@ $(document).ready(function () {
   // chars
   const animate_chars = document.querySelectorAll(".animate_chars");
   animate_chars.forEach((areveal) => {
-    var duration_value = .75;
+    var duration_value = 0.75;
     var onscroll_value = 1;
     var stagger_value = 0.003;
     var data_delay = 0.5;
@@ -153,7 +151,7 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        y: 80,
+        x: 40,
         stagger: stagger_value,
         opacity: 0,
       });
@@ -162,163 +160,11 @@ $(document).ready(function () {
         duration: duration_value,
         delay: data_delay,
         ease: "circ.out",
-        y: 80,
+        x: 40,
         stagger: stagger_value,
         opacity: 0,
       });
     }
-  });
-  //history Slider
-  var historySlider = new Swiper(".historySlider", {
-    pagination: {
-      el: ".historyPagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".historyNext",
-      prevEl: ".historyPrev",
-    },
-    slidesPerView: "auto",
-    spaceBetween: 0,
-    speed: 1000,
-    autoplay: {
-      delay: 1500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      991: {
-        slidesPerView: 4,
-      },
-      1400: {
-        slidesPerView: 5,
-      },
-      1800: {
-        slidesPerView: 6,
-      },
-    },
-  });
-  // team slider
-  // var teamSlider = new Swiper(".teamSlider", {
-  //   navigation: {
-  //     nextEl: ".teamNext",
-  //     prevEl: ".teamPrev",
-  //   },
-  //   pagination: {
-  //     el: ".teamPagination",
-  //     type: "fraction",
-  //   },
-  //   // loop: true,
-  //   spaceBetween: 30,
-  //   speed: 1000,
-  //   // autoplay: {
-  //   //   delay: 2500,
-  //   //   disableOnInteraction: false,
-  //   // },
-  //   slidesPerView: "auto",
-  // });
-  // $(".teamSlider").hover(
-  //   function () {
-  //     this.swiper.autoplay.stop();
-  //   },
-  //   function () {
-  //     this.swiper.autoplay.start();
-  //   }
-  // );
-  //companySlider Slider
-  var companySlider = new Swiper(".companySlider", {
-    // centeredSlides: true,
-    loop: true,
-    slidesPerView: "auto",
-    spaceBetween: 12,
-    speed: 1000,
-    pagination: {
-      el: ".companyPagination",
-      clickable: true,
-    },
-    autoplay: {
-      delay: 1500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      991: {
-        slidesPerView: 3,
-      },
-      1400: {
-        slidesPerView: 3,
-      },
-    },
-  });
-  //investmentsSlider Slider
-  var investmentsSlider = new Swiper(".investmentsSlider", {
-    // centeredSlides: true,
-    loop: true,
-    slidesPerView: "auto",
-    spaceBetween: 12,
-    speed: 1000,
-    pagination: {
-      el: ".investmentsPagination",
-      clickable: true,
-    },
-    autoplay: {
-      delay: 1500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      991: {
-        slidesPerView: 3,
-      },
-      1400: {
-        slidesPerView: 3,
-      },
-    },
-  });
-  //partnersSlider Slider
-  var partnersSlider = new Swiper(".partnersSlider", {
-    // centeredSlides: true,
-    loop: true,
-    slidesPerView: "auto",
-    spaceBetween: 12,
-    speed: 1000,
-    pagination: {
-      el: ".partnersPagination",
-      clickable: true,
-    },
-    autoplay: {
-      delay: 1500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      991: {
-        slidesPerView: 5,
-      },
-      1400: {
-        slidesPerView: 6,
-      },
-    },
   });
   // scroll
   const sections = document.querySelectorAll(".active-nav-class");
@@ -360,6 +206,36 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
+  //partnersSlider Slider
+  var partnersSlider = new Swiper(".partnersSlider", {
+    // centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    speed: 1000,
+    pagination: {
+      el: ".partnersPagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      991: {
+        slidesPerView: 5,
+      },
+      1400: {
+        slidesPerView: 6,
+      },
+    },
+  });
   // ourWork
   var ourWork = new Swiper(".ourWork .swiper", {
     navigation: {
@@ -389,7 +265,7 @@ $(document).ready(function () {
       },
     },
   });
-  $(".ourWork").hover(
+  $(".ourWork .swiper").hover(
     function () {
       this.swiper.autoplay.stop();
     },
@@ -476,22 +352,6 @@ $(document).ready(function () {
   const IO = new IntersectionObserver(callback, { threshold: 1 });
   const elements = document.querySelectorAll(".counterUp");
   elements.forEach((el) => IO.observe(el));
-});
-// Fade Animation Bottom
-let fade_animation = gsap.utils.toArray(".cxu-fade");
-fade_animation.forEach((fade) => {
-  const ease_value = fade.getAttribute("data-ease");
-  gsap.from(fade, {
-    scrollTrigger: {
-      trigger: fade,
-      start: "top 90%",
-    },
-    delay: 0.5,
-    opacity: 0,
-    y: 50,
-    ease: ease_value,
-    duration: 1.5,
-  });
 });
 
 function highlight(el) {

@@ -745,6 +745,7 @@ header {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
+      overflow: hidden;
       // text-align: center;
       justify-content: center;
       @media screen and (max-width: 768px) {
@@ -759,7 +760,22 @@ header {
         align-items: center;
         gap: 4px;
         border-radius: 12px;
-        transition: var(--transition);
+        position: relative;
+        isolation: isolate;
+        &::after{
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: var(--mainColor);
+          z-index: -1;
+          border-radius: 12px;
+          opacity: 0;
+          transition: var(--transition);
+          visibility: hidden;
+        }
         img {
           min-width: 80px;
           width: 100%;
@@ -776,8 +792,6 @@ header {
           white-space: nowrap;
         }
         &:hover {
-          background-color: var(--mainColor);
-          transform: translateY(-5px);
           h6 {
             color: white;
           }
@@ -786,6 +800,10 @@ header {
           }
           img {
             filter: brightness(0) invert(1);
+          }
+          &::after{
+            opacity: 1;
+            visibility: visible;
           }
         }
       }
