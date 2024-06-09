@@ -51,7 +51,7 @@ $(document).ready(function () {
       areveal.anim = gsap.from(areveal.split.lines, {
         scrollTrigger: {
           trigger: areveal,
-          start: "top 90%",
+          start: "top 95%",
         },
         duration: duration_value,
         delay: data_delay,
@@ -99,7 +99,7 @@ $(document).ready(function () {
       areveal.anim = gsap.from(areveal.split.words, {
         scrollTrigger: {
           trigger: areveal,
-          start: "top 90%",
+          start: "top 95%",
         },
         duration: duration_value,
         delay: data_delay,
@@ -146,7 +146,7 @@ $(document).ready(function () {
       areveal.anim = gsap.from(areveal.split.chars, {
         scrollTrigger: {
           trigger: areveal,
-          start: "top 90%",
+          start: "top 95%",
         },
         duration: duration_value,
         delay: data_delay,
