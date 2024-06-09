@@ -602,7 +602,6 @@ header {
       margin: auto;
       filter: grayscale(1);
       transition: var(--transition);
-
       .simpleParallax {
         height: 100%;
       }
@@ -613,7 +612,6 @@ header {
         height: 85%;
         object-position: top;
       }
-
       &:hover {
         filter: grayscale(0);
       }
@@ -1119,206 +1117,9 @@ footer {
     font-size: 14px;
   }
 }
-.galleryPage {
-  padding: 20px 0 00px;
-  .inner {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    a {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      height: 400px;
-      min-width: 20vw;
-      border: 3px solid var(--secondColor30);
-      position: relative;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: relative;
-        z-index: 1;
-      }
-      .title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 8px 16px;
-        z-index: 3;
-        color: var(--whiteColor);
-        background-color: #5c606870;
-      }
-      &:nth-child(4n) {
-        min-width: 40vw;
-      }
-      @media (max-width: 768px) {
-        height: 200px;
-        min-width: 40vw;
-        &:nth-child(4n) {
-          min-width: 60vw;
-        }
-      }
-    }
-    @media (max-width: 768px) {
-      gap: 4px;
-    }
-  }
-}
-.banner {
-  background-image: linear-gradient(#ffffff0e, #ffffff), url(../img/BG.svg) !important;
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0 50px;
-  position: relative;
-  display: flex;
-  background-size: 40px;
-  @media (max-width: 768px) {
-    padding: 120px 0 30px;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .links {
-    a {
-      padding: 4px;
-      position: relative;
-      color: var(--darkColor);
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      text-transform: capitalize;
-      &:last-child {
-        &::after {
-          display: none;
-        }
-      }
-      &::after {
-        content: " ↣ ";
-        transform: scaleX(-1);
-      }
-      &.active {
-        cursor: default;
-        color: var(--grayColor);
-      }
-    }
-  }
-  h2 {
-    font-weight: bold;
-    color: var(--darkColor);
-    text-transform: capitalize;
-    font-family: "fontBold", sans-serif !important;
-  }
-}
-.careerPage {
-  padding: 0 0 48px;
-  .job {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 4px;
-    // box-shadow: var(--BigShadow);
-    height: 100%;
-    border: 1px dashed var(--mainColor20);
-    border-radius: 8px;
-    img {
-      width: 100%;
-      aspect-ratio: 3/2;
-      max-height: 200px;
-      object-fit: cover;
-      background-color: var(--secondColor);
-      border-radius: 8px 8px 0 0;
-    }
-    .text {
-      padding: 8px 16px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 8px;
-      .jobTitle {
-        font-weight: bold;
-        color: var(--darkColor);
-      }
-      .des {
-        font-size: 13px;
-        flex: 1;
-      }
-      a {
-        margin-top: 16px;
-        text-align: center;
-        justify-content: center;
-        padding: 8px 16px;
-        font-size: 13px;
-        background-color: var(--mainColor05);
-        border-radius: 8px;
-      }
-    }
-  }
-}
-.careersForm {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding: 16px;
-  background-color: var(--secondColor);
-  border-radius: 8px;
-  position: sticky;
-  top: 120px;
-  .title {
-    font-family: "fontBold", Sans-serif !important;
-    color: var(--mainColor);
-    text-transform: none;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    label {
-      font-family: "fontBold", Sans-serif !important;
-      font-size: 14px;
-    }
-    .send {
-      background-color: var(--mainColor);
-      padding: 16px;
-      width: min(100% - 24px, 300px);
-      margin: auto;
-      color: var(--whiteColor);
-      border-radius: 100px;
-    }
-  }
-}
-.filepond--credits {
-  display: none !important;
-}
-.filepond--image-clip {
-  direction: ltr !important;
-}
-.jobDetails {
-  .details {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    .jobImg {
-      width: 100%;
-      aspect-ratio: 3/2;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .jobTitle {
-      font-weight: bold;
-      margin: 8px 0;
-      color: var(--darkColor);
-    }
-  }
-}
 .serviceArea {
   background-color: var(--mainColor);
   padding: 80px 0;
-
   .serviceTop {
     text-align: center;
     padding-bottom: 55px;
@@ -1502,7 +1303,6 @@ footer {
           opacity: 1;
           visibility: visible;
         }
-
         .number,
         .title {
           color: var(--darkColor);
@@ -1804,7 +1604,6 @@ footer {
     }
   }
 }
-
 .careers {
   background: var(--mainColor);
   padding: 60px 24px;
@@ -1825,7 +1624,6 @@ footer {
     @media (max-width: 992px) {
       text-align: center;
     }
-
     .secTitle {
       font-weight: bold;
       color: var(--whiteColor);
@@ -1871,7 +1669,6 @@ footer {
     }
   }
 }
-
 .contact {
   padding: 80px 0;
   form {
@@ -1952,7 +1749,6 @@ footer {
         }
       }
     }
-
     .outlineGradient {
       justify-content: center;
       width: fit-content;
@@ -1979,7 +1775,6 @@ footer {
       @media (max-width: 992px) {
         text-align: center;
       }
-
       .secTitle {
         font-weight: bold;
         color: var(--whiteColor);
@@ -2010,11 +1805,9 @@ footer {
       flex-direction: column;
       gap: 16px;
     }
-
     .field {
       width: 100%;
       display: flex;
-
       gap: 16px;
       align-items: center;
       .icon {
@@ -2076,7 +1869,6 @@ footer {
     }
   }
 }
-
 .copywriting {
   display: flex;
   padding: 24px;
@@ -2100,7 +1892,6 @@ footer {
     filter: brightness(0) invert(1);
   }
 }
-
 .modal {
   .modal-content {
     background: var(--mainColor);
@@ -2129,7 +1920,6 @@ footer {
         top: 0;
       }
     }
-
     .workDetails {
       display: flex;
       flex-direction: column;
@@ -2160,12 +1950,10 @@ footer {
         font-size: 14px;
         flex: 1;
         overflow: hidden;
-        
       }
     }
   }
 }
-
 .itemDetailsSlider {
   display: flex;
   flex-direction: column;
@@ -2236,4 +2024,11 @@ footer {
       filter: brightness(0) invert(1);
     }
   }
+}
+
+
+.animate_lines,
+.animate_chars ,
+.animate_chars {
+  overflow-x: inherit;
 }
