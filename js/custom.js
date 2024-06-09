@@ -282,6 +282,42 @@ $(document).ready(function () {
       $(this).text(truncatedText);
     }
   });
+
+  // item Details Slider
+  var itemDetailsSliderThumbs = new Swiper(".itemDetailsSlider .thumbs", {
+    // loop: true,
+    spaceBetween: 8,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 3,
+      },
+      576: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 5,
+        direction: "vertical",
+      },
+    },
+  });
+  var itemDetailsSliderSlider = new Swiper(".itemDetailsSlider .slider", {
+    // loop: true,
+    spaceBetween: 8,
+    pagination: {
+      el: ".itemDetailsSlider .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".itemDetailsSlider .swiper-button-next",
+      prevEl: ".itemDetailsSlider .swiper-button-prev",
+    },
+    thumbs: {
+      swiper: itemDetailsSliderThumbs,
+    },
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
