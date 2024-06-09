@@ -45,10 +45,10 @@
 }
 ::-webkit-scrollbar-track {
   border-radius: 0px !important;
-  background: #dddddd;
+  background: var(--darkColor);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #a1a1a1;
+  background-color: var(--mainColor);
   outline: none;
   border-radius: 20px !important;
 }
@@ -74,7 +74,7 @@ button:focus {
 }
 body {
   overflow-x: hidden !important;
-  width: 100dvw;
+  width: 100vw;
   background-color: var(--darkColor);
 }
 body,
