@@ -1436,6 +1436,17 @@ footer .border-top {
     grid-template-columns: 1fr;
   }
 }
+.serviceArea .cxuService .serviceItem .text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 20px;
+}
+.serviceArea .cxuService .serviceItem .subTitle {
+  transition: var(--transition);
+  color: #dbdbdb;
+  font-size: 14px;
+}
 .serviceArea .cxuService .serviceItem .title {
   transition: var(--transition);
   font-size: 35px;
@@ -1550,6 +1561,9 @@ footer .border-top {
 .serviceArea .cxuService .serviceItem:hover .number,
 .serviceArea .cxuService .serviceItem:hover .title {
   color: var(--darkColor);
+}
+.serviceArea .cxuService .serviceItem:hover .subTitle {
+  color: #616161;
 }
 .serviceArea .cxuService .serviceItem:hover .services li {
   color: var(--darkColor);

@@ -493,25 +493,7 @@ fade_animation.forEach((fade) => {
     duration: 1.5,
   });
 });
-// Service move
-var service_item = gsap.utils.toArray(".cxuService .serviceItem");
-let service_img = gsap.utils.toArray(".cxuService .hover-img");
-function ServiceImageMove(event, item) {
-  const contentBox = item.getBoundingClientRect();
-  const dx = (event.clientX - contentBox.x) / 5;
-  const dy = (event.clientY - contentBox.y) / 8;
-  service_img.forEach((img) => {
-    gsap.to(img, {
-      x: dx,
-      y: dy,
-    });
-  });
-}
-service_item.forEach((item, i) => {
-  item.addEventListener("mousemove", (event) => {
-    setInterval(ServiceImageMove(event, item), 1000);
-  });
-});
+
 function highlight(el) {
   el.previousElementSibling.classList.add("h");
 }

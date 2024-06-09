@@ -601,7 +601,7 @@ header {
       margin: auto;
       filter: grayscale(1);
       transition: var(--transition);
-    
+
       .simpleParallax {
         height: 100%;
       }
@@ -611,7 +611,6 @@ header {
         object-fit: cover;
         height: 85%;
         object-position: top;
-    
       }
 
       &:hover {
@@ -761,7 +760,7 @@ header {
         gap: 4px;
         border-radius: 12px;
         transition: var(--transition);
-        img{
+        img {
           min-width: 80px;
           width: 100%;
           max-height: 100px;
@@ -785,7 +784,7 @@ header {
           p {
             color: white;
           }
-          img{
+          img {
             filter: brightness(0) invert(1);
           }
         }
@@ -1370,6 +1369,18 @@ footer {
       @media (max-width: 767px) {
         grid-template-columns: 1fr;
       }
+      .text{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding-right: 20px;
+      }
+      .subTitle {
+        transition: var(--transition);
+        color: #dbdbdb;
+        font-size: 14px;
+        
+      }
       .title {
         transition: var(--transition);
         font-size: 35px;
@@ -1472,9 +1483,13 @@ footer {
           opacity: 1;
           visibility: visible;
         }
+        
         .number,
         .title {
           color: var(--darkColor);
+        }
+        .subTitle{
+          color: #616161;
         }
         .services li {
           color: var(--darkColor);
@@ -2043,25 +2058,24 @@ footer {
   }
 }
 
-
-.copywriting{
+.copywriting {
   display: flex;
-  padding: 24px ;
+  padding: 24px;
   margin-top: 24px;
   border-top: 1px solid #ffffff30;
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
-  a{
+  a {
     color: var(--whiteColor) !important;
     display: flex;
     align-items: center;
     gap: 4px;
-    span{
+    span {
       text-transform: uppercase;
     }
   }
-  img{
+  img {
     height: 24px;
     object-fit: contain;
     filter: brightness(0) invert(1);
