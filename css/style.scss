@@ -439,7 +439,7 @@ header {
     }
   }
 }
-.gradientText * {
+.gradientText {
   background: var(--linearGradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
