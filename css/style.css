@@ -217,6 +217,8 @@ content {
   min-height: calc(100dvh - 320px);
   display: flex;
   flex-direction: column;
+  width: 100dvw;
+  overflow-x: hidden;
 }
 
 .spinerLoader {
