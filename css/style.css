@@ -1921,6 +1921,7 @@ footer .border-top {
 @media (max-width: 992px) {
   .careers .top {
     text-align: center;
+    margin: auto;
   }
 }
 .careers .top .secTitle {
