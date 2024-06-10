@@ -448,13 +448,13 @@ header {
 }
 @keyframes animateBg {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
 .hero {
@@ -1119,7 +1119,8 @@ footer {
 }
 .serviceArea {
   background: linear-gradient(#0159f2c4, #0159f2cb), url("../img/services.jpg");
-  background-size: cover;
+  background-size: 300%;
+  animation: animateBg 80s linear infinite;
   padding: 80px 8px;
   .serviceTop {
     text-align: center;

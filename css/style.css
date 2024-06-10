@@ -475,13 +475,13 @@ header.headerAnimate .inner {
 
 @keyframes animateBg {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
 .hero {
@@ -1169,7 +1169,8 @@ footer .border-top {
 }
 .serviceArea {
   background: linear-gradient(rgba(1, 89, 242, 0.768627451), rgba(1, 89, 242, 0.7960784314)), url("../img/services.jpg");
-  background-size: cover;
+  background-size: 300%;
+  animation: animateBg 80s linear infinite;
   padding: 80px 8px;
 }
 .serviceArea .serviceTop {
