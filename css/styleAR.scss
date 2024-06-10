@@ -35,7 +35,7 @@
   padding: 0;
   outline: none;
   scroll-behavior: smooth;
-  direction: ltr;
+  direction: rtl;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -198,7 +198,7 @@ content {
   background-color: var(--darkColor);
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 999999;
   width: 100%;
   height: 100%;
@@ -216,7 +216,7 @@ content {
     &::after {
       content: "";
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
       width: 200px;
       height: 200px;
@@ -253,7 +253,7 @@ content {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -263,8 +263,8 @@ content {
   }
   &.oppositeDir {
     &::after {
-      left: unset;
-      right: 0;
+      right: unset;
+      left: 0;
     }
   }
   .lazy {
@@ -274,11 +274,11 @@ content {
   }
   &.loaded {
     &::after {
-      transform: translateX(-100%);
+      transform: translateX(100%);
     }
     &.oppositeDir {
       &::after {
-        transform: translateX(100%);
+        transform: translateX(-100%);
       }
     }
     &.down {
@@ -301,7 +301,7 @@ content {
 header {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1024;
   transition: var(--transition);
@@ -318,14 +318,14 @@ header {
     transition: var(--transition);
     .navbar-brand {
       padding: 5px;
-      margin-right: auto;
+      margin-left: auto;
       img {
         height: 40px;
         min-width: 100px;
         max-width: 250px;
         width: 100%;
         object-fit: contain;
-        object-position: left;
+        object-position: right;
         padding-bottom: 8px;
       }
     }
@@ -357,7 +357,7 @@ header {
           max-width: 250px;
           width: 100%;
           object-fit: contain;
-          object-position: left;
+          object-position: right;
         }
       }
       @media screen and (max-width: 992px) {
@@ -373,7 +373,7 @@ header {
           }
           display: flex;
           position: fixed;
-          left: 0;
+          right: 0;
           top: 0;
           gap: 8px;
           background-color: var(--darkColor);
@@ -382,7 +382,7 @@ header {
           width: 300px;
           text-align: start;
           padding: 24px;
-          transform: translateX(-400px);
+          transform: translateX(400px);
           transition: var(--transition);
           z-index: 2;
           &.show {
@@ -434,11 +434,11 @@ header {
     content: "";
     position: absolute;
     bottom: 50%;
-    left: 50%;
+    right: 50%;
     width: calc(100% - 4px);
     height: calc(100% - 4px);
     z-index: 1;
-    transform: translate(-50%, 50%);
+    transform: translate(50%, 50%);
     background-color: var(--darkColor);
     border-radius: 8px;
     transition: var(--transition);
@@ -484,7 +484,7 @@ header {
   width: 100%;
   // position: fixed;
   // top: 0;
-  // left: 0;
+  // right: 0;
   // z-index: -1;
   .heroView {
     position: relative;
@@ -493,7 +493,7 @@ header {
     z-index: -1;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     user-select: none;
@@ -508,7 +508,7 @@ header {
       width: 100%;
       height: 100%;
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
       background: var(--darkColor);
       z-index: 1;
@@ -603,7 +603,7 @@ header {
     &::before {
       content: "";
       position: absolute;
-      right: 0;
+      left: 0;
       top: 50%;
       border: 10px solid;
       border-image-slice: 1;
@@ -666,8 +666,8 @@ header {
 .downloadProfile {
   display: inline-flex;
   padding: 12px;
-  padding-left: 52px;
-  padding-right: 24px;
+  padding-right: 52px;
+  padding-left: 24px;
   height: 48px;
   border-radius: 100px;
   transition: var(--transition);
@@ -692,7 +692,7 @@ header {
     transition: var(--transition);
     position: absolute;
     top: 50%;
-    left: 4px;
+    right: 4px;
     transform: translateY(-50%);
     z-index: 4;
     img {
@@ -700,6 +700,7 @@ header {
       height: 100%;
       object-fit: contain;
       object-position: center;
+      transform: scaleX(-1);
     }
   }
   .text {
@@ -708,11 +709,11 @@ header {
     
   }
   &:hover {
-    padding-right: 52px;
-    padding-left: 24px;
+    padding-left: 52px;
+    padding-right: 24px;
     transition: var(--transition);
     .icon {
-      left: calc(100% - 44px);
+      right: calc(100% - 44px);
     }
    
   }
@@ -760,7 +761,7 @@ header {
   }
   .BG {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
     z-index: 1;
     width: 100%;
@@ -768,7 +769,7 @@ header {
     overflow: hidden;
     &::after {
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
       width: 100%;
       height: 100%;
@@ -838,7 +839,7 @@ header {
           width: 100%;
           height: 100%;
           top: 0;
-          left: 0;
+          right: 0;
           background-color: var(--mainColor);
           z-index: -1;
           border-radius: 12px;
@@ -900,30 +901,30 @@ header {
     border-radius: 50%;
     position: absolute;
     top: 0;
-    right: 50%;
-    transform: translateX(50%);
+    left: 50%;
+    transform: translateX(-50%);
     animation: scrollDown linear 2s infinite;
     transition: var(--transition);
   }
 }
 @keyframes scrollDown {
   0% {
-    transform: translate(50%, 0px);
+    transform: translate(-50%, 0px);
     opacity: 0;
   }
   50% {
-    transform: translate(50%, 16px);
+    transform: translate(-50%, 16px);
     opacity: 1;
   }
   100% {
-    transform: translate(50%, 32px);
+    transform: translate(-50%, 32px);
     opacity: 0;
   }
 }
 .swiperControl {
   position: relative;
   bottom: unset;
-  left: unset;
+  right: unset;
   padding: 20px;
   display: flex;
   gap: 24px;
@@ -934,8 +935,8 @@ header {
     .swiper-button-next,
     .swiper-button-prev {
       position: relative;
-      right: unset;
       left: unset;
+      right: unset;
       top: unset;
       bottom: unset;
       margin: unset;
@@ -961,6 +962,7 @@ header {
         background-size: contain;
         transition: var(--transition);
         filter: brightness(0) invert(1);
+        transform: scaleX(-1);
         @media (max-width: 768px) {
           font-size: 24px;
         }
@@ -978,18 +980,17 @@ header {
       }
     }
     .swiper-button-next {
-      right: unset;
+      left: unset;
       &::after {
         transform: unset;
-        transform: scaleX(-1);
       }
     }
   }
   .swiper-pagination {
     position: relative;
     min-height: 16px;
-    right: unset;
     left: unset;
+    right: unset;
     top: unset;
     bottom: unset;
     margin: unset;
@@ -1018,7 +1019,7 @@ footer {
       width: 100%;
       aspect-ratio: 1/1;
       object-fit: contain;
-      object-position: left;
+      object-position: right;
       max-height: 40px;
       filter: brightness(0) invert(1);
     }
@@ -1032,7 +1033,7 @@ footer {
     align-items: center;
     img {
       object-fit: contain;
-      object-position: left;
+      object-position: right;
       max-height: 40px;
       filter: brightness(0) invert(1);
     }
@@ -1268,7 +1269,7 @@ footer {
       .serviceList {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         width: 100%;
         height: 100%;
         display: flex;
@@ -1294,6 +1295,7 @@ footer {
             min-width: 16px;
             aspect-ratio: 1;
             object-fit: contain;
+            transform: scaleX(-1);
           }
         }
       }
@@ -1323,7 +1325,7 @@ footer {
             @keyframes fade-in {
               from {
                 opacity: 0;
-                transform: translateX(-10px);
+                transform: translateX(10px);
               }
               to {
                 opacity: 1;
@@ -1377,7 +1379,7 @@ footer {
       background: #0f0f10bb;
       position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
       height: 100%;
       width: 100%;
       display: flex;
@@ -1426,7 +1428,7 @@ footer {
       gap: 8px;
       .favimg {
         height: 24px;
-        object-position: left;
+        object-position: right;
         object-fit: contain;
         filter: grayscale(1);
       }
@@ -1444,14 +1446,14 @@ footer {
       }
       .outlineGradient {
         width: fit-content;
-        margin-left: auto;
+        margin-right: auto;
         border-radius: 100px;
         &::after {
           border-radius: 100px;
         }
         img {
           height: 16px;
-          margin-left: 4px;
+          margin-right: 4px;
           object-fit: contain;
           aspect-ratio: 1;
         }
@@ -1708,14 +1710,14 @@ footer {
           position: absolute;
           font-size: 14px;
           color: var(--grayColor);
-          left: 16px;
-          transform: translateY(-50%);
+          right: 16px;
+          transform: translateY(50%);
           top: 50%;
           font-weight: 500;
           transition: var(--transition);
           text-transform: capitalize;
           i {
-            margin-right: 4px;
+            margin-left: 4px;
           }
           cursor: auto;
           &.message-label {
@@ -1749,11 +1751,11 @@ footer {
             content: "";
             width: 0;
             transition: var(--transition);
-            left: 50%;
+            right: 50%;
             height: 1px;
             background: var(--mainColor);
             position: absolute;
-            transform: translate(-50%);
+            transform: translate(50%);
           }
         }
       }
@@ -1762,7 +1764,7 @@ footer {
       justify-content: center;
       width: fit-content;
       align-self: flex-end;
-      margin-right: 16px;
+      margin-left: 16px;
       &::after {
         background: #000000;
       }
@@ -1837,7 +1839,7 @@ footer {
           height: 100%;
           position: absolute;
           top: 0;
-          left: 0;
+          right: 0;
           opacity: 0;
           z-index: 0;
           transition: var(--transition);
@@ -1910,7 +1912,7 @@ footer {
     position: relative;
     .btnClose {
       position: absolute;
-      right: -12px;
+      left: -12px;
       top: -12px;
       background: var(--mainColor);
       color: var(--whiteColor);
@@ -1926,7 +1928,7 @@ footer {
       font-size: 16px;
       z-index: 2;
       @media screen and (max-width: 768px) {
-        right: 0;
+        left: 0;
         top: 0;
       }
     }
@@ -2021,7 +2023,7 @@ footer {
   }
   .swiperControl {
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
   }
   .swiperControl .swiperBtns .swiper-button-next,

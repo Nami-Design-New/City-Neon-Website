@@ -36,7 +36,7 @@
   padding: 0;
   outline: none;
   scroll-behavior: smooth;
-  direction: ltr;
+  direction: rtl;
 }
 
 ::-webkit-scrollbar {
@@ -223,7 +223,7 @@ content {
   background-color: var(--darkColor);
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 999999;
   width: 100%;
   height: 100%;
@@ -247,7 +247,7 @@ content {
 .spinerLoader .spinerLoaderImg::after {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   width: 200px;
   height: 200px;
@@ -284,7 +284,7 @@ content {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -293,8 +293,8 @@ content {
   transform: translateX(0%);
 }
 .lazyDiv.oppositeDir::after {
-  left: unset;
-  right: 0;
+  right: unset;
+  left: 0;
 }
 .lazyDiv .lazy {
   position: relative;
@@ -302,10 +302,10 @@ content {
   width: 100%;
 }
 .lazyDiv.loaded::after {
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 .lazyDiv.loaded.oppositeDir::after {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 .lazyDiv.loaded.down::after {
   transform: translateY(100%);
@@ -323,7 +323,7 @@ content {
 header {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1024;
   transition: var(--transition);
@@ -342,7 +342,7 @@ header .inner {
 }
 header .inner .navbar-brand {
   padding: 5px;
-  margin-right: auto;
+  margin-left: auto;
 }
 header .inner .navbar-brand img {
   height: 40px;
@@ -351,8 +351,8 @@ header .inner .navbar-brand img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: left;
-     object-position: left;
+  -o-object-position: right;
+     object-position: right;
   padding-bottom: 8px;
 }
 header .inner .navbar {
@@ -385,8 +385,8 @@ header .inner .navbar .logo img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: left;
-     object-position: left;
+  -o-object-position: right;
+     object-position: right;
 }
 @media screen and (max-width: 992px) {
   header .inner .navbar {
@@ -400,7 +400,7 @@ header .inner .navbar .logo img {
   header .inner .navbar .navbar-nav {
     display: flex;
     position: fixed;
-    left: 0;
+    right: 0;
     top: 0;
     gap: 8px;
     background-color: var(--darkColor);
@@ -409,7 +409,7 @@ header .inner .navbar .logo img {
     width: 300px;
     text-align: start;
     padding: 24px;
-    transform: translateX(-400px);
+    transform: translateX(400px);
     transition: var(--transition);
     z-index: 2;
   }
@@ -462,11 +462,11 @@ header.headerAnimate .inner {
   content: "";
   position: absolute;
   bottom: 50%;
-  left: 50%;
+  right: 50%;
   width: calc(100% - 4px);
   height: calc(100% - 4px);
   z-index: 1;
-  transform: translate(-50%, 50%);
+  transform: translate(50%, 50%);
   background-color: var(--darkColor);
   border-radius: 8px;
   transition: var(--transition);
@@ -517,7 +517,7 @@ header.headerAnimate .inner {
   z-index: -1;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   -webkit-user-select: none;
@@ -536,7 +536,7 @@ header.headerAnimate .inner {
   width: 100%;
   height: 100%;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   background: var(--darkColor);
   z-index: 1;
@@ -631,7 +631,7 @@ header.headerAnimate .inner {
 .aboutPage .lazyImg::before {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 50%;
   border: 10px solid;
   border-image-slice: 1;
@@ -696,8 +696,8 @@ header.headerAnimate .inner {
 .downloadProfile {
   display: inline-flex;
   padding: 12px;
-  padding-left: 52px;
-  padding-right: 24px;
+  padding-right: 52px;
+  padding-left: 24px;
   height: 48px;
   border-radius: 100px;
   transition: var(--transition);
@@ -724,7 +724,7 @@ header.headerAnimate .inner {
   transition: var(--transition);
   position: absolute;
   top: 50%;
-  left: 4px;
+  right: 4px;
   transform: translateY(-50%);
   z-index: 4;
 }
@@ -735,18 +735,19 @@ header.headerAnimate .inner {
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+  transform: scaleX(-1);
 }
 .downloadProfile .text {
   color: var(--whiteColor);
   text-transform: capitalize;
 }
 .downloadProfile:hover {
-  padding-right: 52px;
-  padding-left: 24px;
+  padding-left: 52px;
+  padding-right: 24px;
   transition: var(--transition);
 }
 .downloadProfile:hover .icon {
-  left: calc(100% - 44px);
+  right: calc(100% - 44px);
 }
 
 .socialMedia {
@@ -796,7 +797,7 @@ header.headerAnimate .inner {
 }
 .vision .BG {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   z-index: 1;
   width: 100%;
@@ -805,7 +806,7 @@ header.headerAnimate .inner {
 }
 .vision .BG::after {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -880,7 +881,7 @@ header.headerAnimate .inner {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: var(--mainColor);
   z-index: -1;
   border-radius: 12px;
@@ -940,30 +941,30 @@ header.headerAnimate .inner {
   border-radius: 50%;
   position: absolute;
   top: 0;
-  right: 50%;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translateX(-50%);
   animation: scrollDown linear 2s infinite;
   transition: var(--transition);
 }
 
 @keyframes scrollDown {
   0% {
-    transform: translate(50%, 0px);
+    transform: translate(-50%, 0px);
     opacity: 0;
   }
   50% {
-    transform: translate(50%, 16px);
+    transform: translate(-50%, 16px);
     opacity: 1;
   }
   100% {
-    transform: translate(50%, 32px);
+    transform: translate(-50%, 32px);
     opacity: 0;
   }
 }
 .swiperControl {
   position: relative;
   bottom: unset;
-  left: unset;
+  right: unset;
   padding: 20px;
   display: flex;
   gap: 24px;
@@ -976,8 +977,8 @@ header.headerAnimate .inner {
 .swiperControl .swiperBtns .swiper-button-next,
 .swiperControl .swiperBtns .swiper-button-prev {
   position: relative;
-  right: unset;
   left: unset;
+  right: unset;
   top: unset;
   bottom: unset;
   margin: unset;
@@ -1005,6 +1006,7 @@ header.headerAnimate .inner {
   background-size: contain;
   transition: var(--transition);
   filter: brightness(0) invert(1);
+  transform: scaleX(-1);
 }
 @media (max-width: 768px) {
   .swiperControl .swiperBtns .swiper-button-next::after,
@@ -1027,17 +1029,16 @@ header.headerAnimate .inner {
   opacity: 0.2;
 }
 .swiperControl .swiperBtns .swiper-button-next {
-  right: unset;
+  left: unset;
 }
 .swiperControl .swiperBtns .swiper-button-next::after {
   transform: unset;
-  transform: scaleX(-1);
 }
 .swiperControl .swiper-pagination {
   position: relative;
   min-height: 16px;
-  right: unset;
   left: unset;
+  right: unset;
   top: unset;
   bottom: unset;
   margin: unset;
@@ -1067,8 +1068,8 @@ footer .logo img {
   aspect-ratio: 1/1;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: left;
-     object-position: left;
+  -o-object-position: right;
+     object-position: right;
   max-height: 40px;
   filter: brightness(0) invert(1);
 }
@@ -1083,8 +1084,8 @@ footer .part {
 footer .part img {
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: left;
-     object-position: left;
+  -o-object-position: right;
+     object-position: right;
   max-height: 40px;
   filter: brightness(0) invert(1);
 }
@@ -1326,7 +1327,7 @@ footer .border-top {
 .serviceArea .allServices .serviceItem .serviceList {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1354,6 +1355,7 @@ footer .border-top {
   aspect-ratio: 1;
   -o-object-fit: contain;
      object-fit: contain;
+  transform: scaleX(-1);
 }
 .serviceArea .allServices .serviceItem:hover .serviceList {
   animation: subMove 0.5s forwards;
@@ -1674,7 +1676,7 @@ footer .border-top {
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateX(-10px);
+    transform: translateX(10px);
   }
   to {
     opacity: 1;
@@ -1729,7 +1731,7 @@ footer .border-top {
   background: rgba(15, 15, 16, 0.7333333333);
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100%;
   width: 100%;
   display: flex;
@@ -1780,8 +1782,8 @@ footer .border-top {
 }
 .flipCard .cardBack .content .favimg {
   height: 24px;
-  -o-object-position: left;
-     object-position: left;
+  -o-object-position: right;
+     object-position: right;
   -o-object-fit: contain;
      object-fit: contain;
   filter: grayscale(1);
@@ -1801,7 +1803,7 @@ footer .border-top {
 .flipCard .cardBack .content .outlineGradient {
   width: -moz-fit-content;
   width: fit-content;
-  margin-left: auto;
+  margin-right: auto;
   border-radius: 100px;
 }
 .flipCard .cardBack .content .outlineGradient::after {
@@ -1809,7 +1811,7 @@ footer .border-top {
 }
 .flipCard .cardBack .content .outlineGradient img {
   height: 16px;
-  margin-left: 4px;
+  margin-right: 4px;
   -o-object-fit: contain;
      object-fit: contain;
   aspect-ratio: 1;
@@ -2084,8 +2086,8 @@ footer .border-top {
   position: absolute;
   font-size: 14px;
   color: var(--grayColor);
-  left: 16px;
-  transform: translateY(-50%);
+  right: 16px;
+  transform: translateY(50%);
   top: 50%;
   font-weight: 500;
   transition: var(--transition);
@@ -2093,7 +2095,7 @@ footer .border-top {
   cursor: auto;
 }
 .contact form .form-group .inputfield label i {
-  margin-right: 4px;
+  margin-left: 4px;
 }
 .contact form .form-group .inputfield label.message-label {
   top: 20%;
@@ -2127,18 +2129,18 @@ footer .border-top {
   content: "";
   width: 0;
   transition: var(--transition);
-  left: 50%;
+  right: 50%;
   height: 1px;
   background: var(--mainColor);
   position: absolute;
-  transform: translate(-50%);
+  transform: translate(50%);
 }
 .contact form .outlineGradient {
   justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
-  margin-right: 16px;
+  margin-left: 16px;
 }
 .contact form .outlineGradient::after {
   background: #000000;
@@ -2221,7 +2223,7 @@ footer .border-top {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   opacity: 0;
   z-index: 0;
   transition: var(--transition);
@@ -2291,7 +2293,7 @@ footer .border-top {
 }
 .modal .modal-content .btnClose {
   position: absolute;
-  right: -12px;
+  left: -12px;
   top: -12px;
   background: var(--mainColor);
   color: var(--whiteColor);
@@ -2309,7 +2311,7 @@ footer .border-top {
 }
 @media screen and (max-width: 768px) {
   .modal .modal-content .btnClose {
-    right: 0;
+    left: 0;
     top: 0;
   }
 }
@@ -2407,7 +2409,7 @@ footer .border-top {
 }
 .itemDetailsSlider .swiperControl {
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
 }
 .itemDetailsSlider .swiperControl .swiperBtns .swiper-button-next,
@@ -2427,4 +2429,4 @@ footer .border-top {
 .animate_chars,
 .animate_chars {
   overflow-x: inherit;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=styleAR.css.map */
