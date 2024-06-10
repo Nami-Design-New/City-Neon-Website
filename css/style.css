@@ -1245,6 +1245,12 @@ footer .border-top {
   font-size: 14px;
   line-height: 1.4;
 }
+.serviceArea .allServices .serviceItem .arrow {
+  margin-top: 24px;
+  align-self: flex-end;
+  width: 20px;
+  height: 20px;
+}
 .serviceArea .allServices .serviceItem .serviceList {
   position: absolute;
   top: 0;
