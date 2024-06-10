@@ -1168,8 +1168,9 @@ footer .border-top {
   }
 }
 .serviceArea {
-  background-color: var(--mainColor);
-  padding: 80px 0;
+  background: linear-gradient(rgba(1, 89, 242, 0.768627451), rgba(1, 89, 242, 0.7960784314)), url("../img/services.jpg");
+  background-size: cover;
+  padding: 80px 8px;
 }
 .serviceArea .serviceTop {
   text-align: center;
@@ -1203,192 +1204,403 @@ footer .border-top {
 .serviceArea .serviceTop .hint {
   color: var(--lightGrayColor);
 }
-.serviceArea .cxuService ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.serviceArea .allServices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
-.serviceArea .cxuService img {
+.serviceArea .allServices img {
   transition: var(--transition);
 }
-.serviceArea .cxuService .serviceItem {
-  gap: 15px;
-  display: grid;
-  grid-template-columns: 0.2fr 1fr 1fr 0.3fr;
-  border-bottom: 1px solid var(--mainColor);
-  transition: all 0.3s;
-  padding: 45px 0;
+.serviceArea .allServices .serviceItem {
   position: relative;
-  isolation: isolate;
-}
-.serviceArea .cxuService .serviceItem::before {
-  content: "";
-  position: absolute;
-  width: calc(100% + 30px);
-  height: 100%;
-  background-color: var(--whiteColor);
-  left: 50%;
-  top: 50%;
-  z-index: -1;
-  border-radius: 16px;
-  transition: var(--transition);
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-50%, -50%);
-}
-@media (max-width: 991px) {
-  .serviceArea .cxuService .serviceItem {
-    padding: 30px 20px;
-    grid-template-columns: 0.2fr 1fr 1.5fr 0.2fr;
-  }
-}
-@media (max-width: 767px) {
-  .serviceArea .cxuService .serviceItem {
-    grid-template-columns: 1fr;
-  }
-}
-.serviceArea .cxuService .serviceItem .text {
+  flex: 1 32%;
+  min-width: 300px;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  background-color: rgba(17, 25, 40, 0.21);
+  padding: 40px;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding-right: 20px;
-}
-.serviceArea .cxuService .serviceItem .subTitle {
-  transition: var(--transition);
-  color: #dbdbdb;
-  font-size: 14px;
-}
-.serviceArea .cxuService .serviceItem .title {
-  transition: var(--transition);
-  font-size: 35px;
-  font-weight: 400;
-  line-height: 1.2;
-  color: var(--whiteColor);
-  text-transform: capitalize;
-  font-weight: bold;
-  font-family: fontBold;
-}
-@media (max-width: 1199px) {
-  .serviceArea .cxuService .serviceItem .title {
-    font-size: 30px;
-  }
-}
-@media (max-width: 991px) {
-  .serviceArea .cxuService .serviceItem .title {
-    font-size: 24px;
-  }
-}
-.serviceArea .cxuService .serviceItem .number {
-  transition: var(--transition);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--whiteColor);
-  text-transform: capitalize;
-}
-.serviceArea .cxuService .serviceItem .services {
-  transition: var(--transition);
-  -moz-columns: 2;
-       columns: 2;
-}
-.serviceArea .cxuService .serviceItem .services li {
-  transition: var(--transition);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--lightGrayColor);
-  text-transform: capitalize;
+  gap: 24px;
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
   gap: 8px;
 }
-.serviceArea .cxuService .serviceItem .link {
-  text-align: end;
+.serviceArea .allServices .serviceItem .serviceIcon {
+  width: 64px;
+  height: 64px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 12px;
 }
-@media (max-width: 767px) {
-  .serviceArea .cxuService .serviceItem .link {
-    text-align: start;
-    margin-top: 10px;
-  }
+.serviceArea .allServices .serviceItem .title {
+  font-family: "fontBold";
+  line-height: 1;
 }
-.serviceArea .cxuService .serviceItem .link a {
-  transition: var(--transition);
-  width: 90px;
-  height: 90px;
-  align-items: center;
-  border-radius: 100%;
-  display: inline-flex;
-  justify-content: center;
-  border: 1px solid var(--whiteColor);
-  overflow: hidden;
+.serviceArea .allServices .serviceItem .subTitle {
+  color: var(--lightGrayColor);
+  font-size: 14px;
+  line-height: 1.4;
 }
-@media (max-width: 991px) {
-  .serviceArea .cxuService .serviceItem .link a {
-    width: 60px;
-    height: 60px;
-  }
-}
-.serviceArea .cxuService .serviceItem .link a:hover .icon-1 {
-  opacity: 0;
-  transform: translate(35px, -35px);
-}
-.serviceArea .cxuService .serviceItem .link a:hover .icon-2 {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.serviceArea .cxuService .serviceItem .link a .icon-1,
-.serviceArea .cxuService .serviceItem .link a .icon-2 {
-  transition: all 0.5s;
-}
-.serviceArea .cxuService .serviceItem .link a .icon-2 {
+.serviceArea .allServices .serviceItem .serviceList {
   position: absolute;
-  transform: translate(-35px, 35px);
-  opacity: 0;
-}
-.serviceArea .cxuService .serviceItem .hover-img {
-  position: absolute;
-  top: -120px;
-  width: 300px;
-  height: 370px;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.serviceArea .cxuService .serviceItem .hover-img img {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 16px;
+  border-radius: 24px;
+  background-color: var(--whiteColor);
+  align-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
 }
-.serviceArea .cxuService .serviceItem:hover {
-  z-index: 3;
-}
-.serviceArea .cxuService .serviceItem:hover::before {
-  opacity: 1;
-  visibility: visible;
-}
-.serviceArea .cxuService .serviceItem:hover .number,
-.serviceArea .cxuService .serviceItem:hover .title {
+.serviceArea .allServices .serviceItem .serviceList span {
+  min-width: calc(50% - 8px);
+  display: flex;
+  align-items: center;
+  gap: 4px;
   color: var(--darkColor);
+  opacity: 0;
+  filter: brightness(0.8);
 }
-.serviceArea .cxuService .serviceItem:hover .subTitle {
-  color: #616161;
+.serviceArea .allServices .serviceItem .serviceList span img {
+  min-width: 16px;
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-.serviceArea .cxuService .serviceItem:hover .services li {
-  color: var(--darkColor);
+.serviceArea .allServices .serviceItem:hover .serviceList {
+  animation: subMove 0.5s forwards;
 }
-.serviceArea .cxuService .serviceItem:hover .services li img {
-  filter: brightness(0);
+@keyframes subMove {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
 }
-.serviceArea .cxuService .serviceItem:hover .link a {
-  border-color: var(--mainColor);
-  background-color: var(--mainColor);
+.serviceArea .allServices .serviceItem:hover .serviceList span {
+  animation: fade-in 0.5s ease-in-out forwards;
 }
-.serviceArea .cxuService .serviceItem:hover .hover-img {
-  opacity: 1;
-  visibility: visible;
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(3) {
+  animation-delay: 0.45s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(5) {
+  animation-delay: 0.75s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(6) {
+  animation-delay: 0.9s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(7) {
+  animation-delay: 1.05s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(8) {
+  animation-delay: 1.2s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(9) {
+  animation-delay: 1.35s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(10) {
+  animation-delay: 1.5s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(11) {
+  animation-delay: 1.65s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(12) {
+  animation-delay: 1.8s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(13) {
+  animation-delay: 1.95s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(14) {
+  animation-delay: 2.1s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(15) {
+  animation-delay: 2.25s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(16) {
+  animation-delay: 2.4s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(17) {
+  animation-delay: 2.55s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(18) {
+  animation-delay: 2.7s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(19) {
+  animation-delay: 2.85s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(20) {
+  animation-delay: 3s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(21) {
+  animation-delay: 3.15s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(22) {
+  animation-delay: 3.3s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(23) {
+  animation-delay: 3.45s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(24) {
+  animation-delay: 3.6s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(25) {
+  animation-delay: 3.75s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(26) {
+  animation-delay: 3.9s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(27) {
+  animation-delay: 4.05s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(28) {
+  animation-delay: 4.2s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(29) {
+  animation-delay: 4.35s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(30) {
+  animation-delay: 4.5s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(31) {
+  animation-delay: 4.65s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(32) {
+  animation-delay: 4.8s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(33) {
+  animation-delay: 4.95s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(34) {
+  animation-delay: 5.1s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(35) {
+  animation-delay: 5.25s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(36) {
+  animation-delay: 5.4s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(37) {
+  animation-delay: 5.55s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(38) {
+  animation-delay: 5.7s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(39) {
+  animation-delay: 5.85s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(40) {
+  animation-delay: 6s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(41) {
+  animation-delay: 6.15s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(42) {
+  animation-delay: 6.3s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(43) {
+  animation-delay: 6.45s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(44) {
+  animation-delay: 6.6s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(45) {
+  animation-delay: 6.75s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(46) {
+  animation-delay: 6.9s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(47) {
+  animation-delay: 7.05s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(48) {
+  animation-delay: 7.2s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(49) {
+  animation-delay: 7.35s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(50) {
+  animation-delay: 7.5s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(51) {
+  animation-delay: 7.65s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(52) {
+  animation-delay: 7.8s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(53) {
+  animation-delay: 7.95s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(54) {
+  animation-delay: 8.1s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(55) {
+  animation-delay: 8.25s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(56) {
+  animation-delay: 8.4s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(57) {
+  animation-delay: 8.55s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(58) {
+  animation-delay: 8.7s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(59) {
+  animation-delay: 8.85s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(60) {
+  animation-delay: 9s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(61) {
+  animation-delay: 9.15s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(62) {
+  animation-delay: 9.3s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(63) {
+  animation-delay: 9.45s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(64) {
+  animation-delay: 9.6s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(65) {
+  animation-delay: 9.75s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(66) {
+  animation-delay: 9.9s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(67) {
+  animation-delay: 10.05s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(68) {
+  animation-delay: 10.2s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(69) {
+  animation-delay: 10.35s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(70) {
+  animation-delay: 10.5s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(71) {
+  animation-delay: 10.65s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(72) {
+  animation-delay: 10.8s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(73) {
+  animation-delay: 10.95s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(74) {
+  animation-delay: 11.1s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(75) {
+  animation-delay: 11.25s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(76) {
+  animation-delay: 11.4s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(77) {
+  animation-delay: 11.55s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(78) {
+  animation-delay: 11.7s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(79) {
+  animation-delay: 11.85s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(80) {
+  animation-delay: 12s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(81) {
+  animation-delay: 12.15s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(82) {
+  animation-delay: 12.3s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(83) {
+  animation-delay: 12.45s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(84) {
+  animation-delay: 12.6s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(85) {
+  animation-delay: 12.75s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(86) {
+  animation-delay: 12.9s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(87) {
+  animation-delay: 13.05s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(88) {
+  animation-delay: 13.2s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(89) {
+  animation-delay: 13.35s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(90) {
+  animation-delay: 13.5s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(91) {
+  animation-delay: 13.65s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(92) {
+  animation-delay: 13.8s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(93) {
+  animation-delay: 13.95s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(94) {
+  animation-delay: 14.1s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(95) {
+  animation-delay: 14.25s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(96) {
+  animation-delay: 14.4s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(97) {
+  animation-delay: 14.55s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(98) {
+  animation-delay: 14.7s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(99) {
+  animation-delay: 14.85s;
+}
+.serviceArea .allServices .serviceItem:hover .serviceList span:nth-child(100) {
+  animation-delay: 15s;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .flipCard {
@@ -2118,7 +2330,8 @@ footer .border-top {
   right: 0;
   bottom: 0;
 }
-.itemDetailsSlider .swiperControl .swiperBtns .swiper-button-next, .itemDetailsSlider .swiperControl .swiperBtns .swiper-button-prev {
+.itemDetailsSlider .swiperControl .swiperBtns .swiper-button-next,
+.itemDetailsSlider .swiperControl .swiperBtns .swiper-button-prev {
   background-color: var(--mainColor);
 }
 .itemDetailsSlider .swiperControl .swiperBtns .swiper-button-next,
